@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esempio</title>
+</head>
+<body>
+    
+    <div id="risultato"></div>
+    <div id="saluto"></div>
+
+    <script>
+        function somma(num1, num2){
+            document.getElementById("risultato").innerHTML = "La somma è: " + (num1 + num2)
+
+        }
+        somma(2,3); 
+
+        function benvenuto(nome) {
+            return "Welcome  " + nome;
+        }
+        
+        let nome = prompt("Inserirsci il tuo nome: ")
+        let output = benvenuto(nome);
+        document.getElementById("saluto").innerHTML = output;
+
+        benvenuto(nome)
+
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For</title>
+</head>
+<body>
+    <div id="frase"></div>
+    <script>
+
+        var numeri = [1,2,3,4,5,6,7,8,9,10]
+        var pari = 0
+        var dispari = 0
+
+        for (let numero of numeri){
+
+            if(numero % 2 == 0 ){
+                pari++
+            }
+            else{
+                dispari++
+            }
+        }
+        document.getElementById("frase").innerHTML = "Nell' array ci sono " + pari + " numeri pari e " + dispari + " numeri dispari";
+
+    </script>
+</body>
+</html>

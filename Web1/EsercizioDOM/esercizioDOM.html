@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <script>
+      function validaForm() {
+          var errori = [];
+  
+          var campi = [
+              { id: "Cognome", messaggio: "Ti sei dimenticato il Cognome" },
+              { id: "Nome", messaggio: "Ti sei dimenticato il Nome" },
+              { id: "Matricola", messaggio: "Ti sei dimenticato la Matricola" },
+              { id: "Regione", messaggio: "Ti sei dimenticato la Regione" },
+              { id: "Email", messaggio: "Ti sei dimenticato l'Email" },
+              { id: "Telefono", messaggio: "Ti sei dimenticato il Numero di Telefono" }
+          ];
+  
+          for (var i = 0; i < campi.length; i++) {
+              var valore = document.getElementById(campi[i].id).value.trim();
+              if (valore === "") {
+                  errori.push(campi[i].messaggio);
+              }
+          }
+  
+          var alertBox = document.getElementById("Alert");
+          if (errori.length > 0) {
+              alertBox.innerHTML = errori.join("<br>");
+              alertBox.style.color = "red";
+          } else {
+              alertBox.innerHTML = "Tutti i campi sono stati compilati correttamente!";
+              alertBox.style.color = "green";
+          }
+      }
+  </script>
+  
+</head>
+<body>
+    
+    <table>
+        <tr>
+          <td>Cognome:</td>
+          <td><input id="Cognome" type="text"></td>
+        </tr>
+        <tr>
+          <td>Nome:</td>
+          <td><input id="Nome" type="text"></td>
+        </tr>
+        <tr>
+          <td>Matricola:</td>
+          <td><input id="Matricola" type="text"></td>
+        </tr>
+        <tr>
+          <td>Regione:</td>
+          <td><input id="Regione" type="text"></td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td><input id="Email" type="text"></td>
+        </tr>
+        <tr>
+          <td>Telefono:</td>
+          <td><input id="Telefono" type="text"></td>
+        </tr>
+        <tr>
+          <td>Richieste Particolari:</td>
+          <td><input id="RichiesteParticolari" type="text"></td>
+        </tr>
+    </table>
+
+    <br><br>
+    <button onclick="validaForm()">INVIA</button>
+
+    
+    <div id="Alert" style="color:red; margin-top:10px;"></div>
+
+</body>
+</html>

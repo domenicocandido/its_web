@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio4.1</title>
+</head>
+    <body>
+
+        <div id="risultato"></div>
+
+        <script>
+            var  a = parseInt(prompt("Inserire un numero: "))
+            var contatore = 0
+            var output = " "
+
+            while (contatore <= 10){
+
+                var risultato= a*contatore
+                output +=  "\n" + a + " x " +  contatore + " = " + risultato;
+                contatore++;
+            
+
+            }
+            document.getElementById("risultato").innerText = "La tabellina è: " + "\n" + output;
+
+
+        </script>
+        
+    </body>
+</html>

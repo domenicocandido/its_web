@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While</title>
+</head>
+<body>
+    <div id="numero"></div>
+    <script>
+        var cont = 0
+        var output= ""
+
+        while(cont <= 20){
+            
+            if (cont==20){
+                output += cont
+            }
+            else{
+                output += cont + ", "
+            }
+            cont += 2;
+
+        }
+
+        document.getElementById("numero").innerText = "(" + output + ")";
+
+    </script>
+</body>
+</html>

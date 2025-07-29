@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For</title>
+</head>
+<body>
+    <div id="tabellina"></div>
+    <script>
+
+        var numero = prompt("Inserire un numero: ")
+        var output = ""
+        for(let i=0; i<=10; i++){
+
+            let risultato = numero*i
+            output += "\n" + numero + " x " + i + " = " + risultato
+        }
+        document.getElementById("tabellina").innerText = output;
+    </script>
+</body>
+</html>

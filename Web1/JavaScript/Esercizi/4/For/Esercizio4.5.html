@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For</title>
+</head>
+<body>
+
+    <div id="numeri"></div>
+
+    <script>
+        
+        let output = ""
+        for(let i=0; i <= 20;){
+
+            if (i==20){
+                output += (i*2)
+            }
+            else{
+                output += (i*2) + ", "
+            }
+
+            i += 2  
+        }
+
+        document.getElementById("numeri").innerText = "(" + output + ")";
+    </script>
+    
+</body>
+</html>

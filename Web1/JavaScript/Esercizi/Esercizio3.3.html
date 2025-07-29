@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio3.3</title>
+</head>
+<body>
+
+    <div id="risultato"></div>
+
+
+
+
+    <script> function secondi_totali(secondi){
+
+        let ore = Math.floor(secondi/ 3600);
+        secondi -= (ore * 3600)
+        let minuti = Math.floor(secondi / 60)
+        secondi -= (minuti * 60)
+        
+        
+        document.getElementById("risultato").innerHTML = 
+                "Ore: " + ore + "\n" +
+                "Minuti: " + minuti + "\n" +
+                "Secondi. " + secondi;
+
+    }
+    let secondi = prompt("Inserire secondi: ")
+
+    secondi_totali(secondi)
+
+    </script>
+
+
+</body>
+</html>

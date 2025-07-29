@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Prodotti</title>
+    <link rel="stylesheet" href="stile.css">
+
+    <script>
+        window.onload = function () {
+            document.getElementById("aggiungiBtn").onclick = function () {
+                var nomeProdotto = document.getElementById("prodottoInput").value.trim();
+
+                if (nomeProdotto === "") {
+                    alert("Inserisci un nome prodotto!");
+                    return;
+                }
+
+                var nuovoElemento = document.createElement("li");
+                nuovoElemento.textContent = nomeProdotto;
+                document.getElementById("listaProdotti").appendChild(nuovoElemento);
+                document.getElementById("prodottoInput").value = "";
+            };
+        };
+    </script>
+</head>
+<body>
+    
+</head>
+<body>
+
+    <h2>Aggiungi un prodotto</h2>
+
+    <input type="text" id="prodottoInput" placeholder="Nome del prodotto">
+    <button id="aggiungiBtn">Aggiungi</button>
+
+    <ul id="listaProdotti"></ul>
+
+
+</body>
+</html>

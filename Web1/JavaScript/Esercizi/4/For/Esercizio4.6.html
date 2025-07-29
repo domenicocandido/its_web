@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For</title>
+</head>
+<body>
+    <div id="media"></div>
+        <script>
+
+            var output = [];
+            var somma = 0;
+
+            for (let i = 0; i<5; i++) {
+
+                let numero = parseInt(prompt("Inserire un numero: "));
+                output.push(numero);
+                somma += numero;
+            }
+
+            var media = parseInt(somma / output.length);
+            document.getElementById("media").innerText = "La media è: "+ media;
+        </script>
+</body>
+</html>
