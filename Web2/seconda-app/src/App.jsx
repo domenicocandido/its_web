@@ -1,14 +1,17 @@
-import { useState } from 'react'
+import React from "react"
 import "./App.css"
-import UserCrud from './user-crud-analyst/UserCrud'
+import Saluto from "./saluto.jsx"
+import CardUtente from "./CardUtente.jsx"
 
 function App() {
-
   return (
     <>
-      <UserCrud></UserCrud>
+      <Saluto />
+      <CardUtente nome="Rob" email="rob@example.com"/>
+      
     </>
   );
 }
 
 export default App;
+
