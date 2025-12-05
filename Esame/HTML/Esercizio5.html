@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="titolo">Ciao</h1>
+<p id="paragrafo">Questo è un testo di prova.</p>
+
+<button id="bottone">Cliccami</button>
+
+<button onclick="alert('ciao')">Click</button> 
+<script>
+function saluta(){
+    alert("ciao");
+}
+</script>
+
+<button onclick="saluta()">Click</button>
+
+<script>
+
+    // 1) Recupero un ramo dell'albero (il bottone)
+    var btn = document.getElementById("bottone");
+
+    // 2) Quando clicco, modifico un altro ramo
+    btn.onclick = function(){
+
+        // Recupero l'h1 
+        var titolo = document.getElementById("titolo");
+
+        // Cambio contenuto e colore
+        titolo.innerHTML = "Hai cliccato il bottone!";
+        titolo.style.color = "red";
+
+    };
+
+</script>
+
+</body>
+</html>
