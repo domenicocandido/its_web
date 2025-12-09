@@ -1,0 +1,19 @@
+div {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+}
+
+span {
+    display: block;
+}
+
+h2 {
+    display: none;
+}
+
+img {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
