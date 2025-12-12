@@ -15,3 +15,7 @@ function richiesta(){
     document.getElementById("paragrafo").style.color= "red";
 
 }
+function cambiaTesto() {
+    let paragrafo = document.getElementById("paragrafo1");
+    paragrafo.textContent = "Il testo è stato cambiato!";
+}
